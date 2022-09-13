@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  font-size: 13px;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* mobile view ----------------------------*/
+
+.wrapper {
+  padding: 1.5rem;
+  background-color: hsl(210, 46%, 95%);
+}
+.person__card {
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+  padding: 2rem;
+}
+.person__card:nth-of-type(1) {
+  background-color: hsl(263, 55%, 52%);
+}
+.person__card:nth-of-type(2) {
+  background-color: hsl(217, 19%, 35%);
+}
+.person__card:nth-of-type(4) {
+  background-color: hsl(219, 29%, 14%);
+}
+.person__card:nth-of-type(3),
+.person__card:nth-of-type(5) {
+  background-color: hsl(0, 0%, 100%);
+}
+.person__card:nth-of-type(3) p,
+.person__card:nth-of-type(5) p {
+  color: hsl(219, 29%, 14%);
+}
+.person__card:nth-of-type(3) .faded.text,
+.person__card:nth-of-type(5) .faded.text {
+  color: hsla(217, 30%, 14%, 0.556);
+}
+
+.person__card:nth-of-type(3) .name,
+.person__card:nth-of-type(5) .name {
+  color: hsl(219, 29%, 14%);
+}
+.person__card:nth-of-type(3) .status,
+.person__card:nth-of-type(5) .status {
+  color: hsla(217, 30%, 14%, 0.556);
+}
+
+.person__card header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+header img {
+  width: 100%;
+  max-width: 4rem;
+  height: auto;
+  border: 0.5px solid rgba(255, 255, 255, 0.346);
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.name,
+.status {
+  color: hsl(208, 100%, 97%);
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  padding: 0.15rem;
+}
+
+.status {
+  color: rgba(240, 248, 255, 0.501);
+  font-size: 0.7rem;
+}
+.inner_section p {
+  padding: 0.23rem;
+  margin-top: 1.1rem;
+  margin-bottom: 1.1rem;
+}
+.bold.text {
+  color: aliceblue;
+  font-size: 1.1rem;
+}
+.faded.text {
+  color: rgba(240, 248, 255, 0.501);
+  font-size: 1.1rem;
+}
+
+/* desktop view ----------------------------*/
+
+@media screen and (min-width: 526px) {
+  .wrapper {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "p1 p1 p2 p3"
+      "p4 p5 p5 p3";
+  }
+  .person__card {
+    margin-right: 20px;
+  }
+  .card1 {
+    grid-area: p1;
+  }
+  .card2 {
+    grid-area: p2;
+  }
+  .card3 {
+    grid-area: p3;
+  }
+  .card4 {
+    grid-area: p4;
+  }
+  .card5 {
+    grid-area: p5;
+  }
+}
